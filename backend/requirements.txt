@@ -1,0 +1,10 @@
+fastapi
+uvicorn[standard]
+python-multipart
+python-dotenv
+openai
+httpx
+pypdf
+pillow
+arabic-reshaper
+python-bidi
