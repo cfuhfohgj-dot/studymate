@@ -30,7 +30,7 @@ export default function Study({ params }: { params: Promise<{ id: string }> }) {
     <article className="space-y-8 pt-4">
       <h1 className="text-2xl font-extrabold sm:text-4xl">{L.title}</h1>
 
-      <section aria-label={t.video} className="overflow-hidden rounded-3xl bg-ink ring-1 ring-ink/20">
+      <section aria-label={t.video} hidden={s.video_status === "unavailable"} className="overflow-hidden rounded-3xl bg-ink ring-1 ring-ink/20">
         {s.video_status === "done" ? (
           <video controls playsInline className="aspect-video w-full" src={`${API}${s.video_url}`} />
         ) : (
