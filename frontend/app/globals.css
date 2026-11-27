@@ -1,0 +1,11 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+@theme {
+  --color-ink: #0f1b3d;      /* أزرق داكن */
+  --color-paper: #f5f7fb;
+  --color-mint: #7be0b0;     /* أخضر فاتح للتقدم والنجاح */
+  --color-iris: #8b7cf6;     /* بنفسجي للإجراء الرئيسي */
+  --font-sans: var(--font-cairo), system-ui, sans-serif;
+}
+body { @apply bg-paper text-ink antialiased dark:bg-[#0a1230] dark:text-slate-100; }
+:focus-visible { outline: 3px solid var(--color-iris); outline-offset: 2px; }
